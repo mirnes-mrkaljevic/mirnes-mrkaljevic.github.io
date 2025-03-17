@@ -1,6 +1,9 @@
+theme: jekyll-theme-cayman
+title: Optimal Coder
+description: Optimal Coder
 lsi: false
 safe: true
-source: [your repo's top level directory]
+source: /site
 incremental: false
 highlighter: rouge
 gist:
