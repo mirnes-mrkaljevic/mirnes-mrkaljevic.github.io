@@ -2,7 +2,7 @@
 title: "My Blog"
 description: "A blog powered by GitHub Pages with the Cayman theme"
 author: "Your Name"
-baseurl: "/blog"  # Set this to "/blog" if your blog is in a subfolder
+baseurl: "/docs/blog"  # Set this to "/blog" if your blog is in a subfolder
 url: "https://mirnes-mrkaljevic.github.io"
 
 # Theme settings
