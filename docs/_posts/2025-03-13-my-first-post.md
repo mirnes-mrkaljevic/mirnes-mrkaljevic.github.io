@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "My First Post"
+title: "My First Blog Post"
 date: 2025-03-13
+author: "Your Name"
 ---
 
-This is my first blog post on GitHub Pages using the Cayman theme.
+Welcome to my first blog post on Jekyll with the Cayman theme!

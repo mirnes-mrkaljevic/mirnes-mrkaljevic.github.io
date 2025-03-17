@@ -1,7 +1,16 @@
 ---
-layout: blog
-title: Home
+layout: default
+title: "Home"
 ---
 
 # Welcome to My Blog
-This is a blog powered by GitHub Pages and Jekyll using the Cayman theme.
+
+Here are my latest posts:
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
+    </li>
+  {% endfor %}
+</ul>
