@@ -1,13 +1,21 @@
+# Site settings
+title: "My Blog"
+description: "A blog powered by GitHub Pages with the Cayman theme"
+author: "Your Name"
+baseurl: "/docs"  # Set this to "/blog" if your blog is in a subfolder
+url: "https://mirnes-mrkaljevic.github.io"
+
+# Theme settings
 theme: jekyll-theme-cayman
-title: Optimal Coder
-description: Optimal Coder
-lsi: false
-safe: true
-source: /site
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude files from Jekyll build (optional)
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
