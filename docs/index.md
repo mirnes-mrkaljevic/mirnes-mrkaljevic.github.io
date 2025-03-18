@@ -9,7 +9,7 @@ title: "Home"
   {% for post in site.posts %}
     <div>
       <h1>{{ post.title }}</h1> 
-      <div>{{ post.content }</div>
+      <div>{{ post.content }}</div>
       </div>
   {% endfor %}
 </div>
