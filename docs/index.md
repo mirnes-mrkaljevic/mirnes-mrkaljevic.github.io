@@ -1,4 +1,8 @@
 ---
+---
+
+@import "{{ site.theme }}";
+---
 layout: default
 title: "Home"
 ---
