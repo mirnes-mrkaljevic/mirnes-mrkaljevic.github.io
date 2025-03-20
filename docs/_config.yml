@@ -7,6 +7,11 @@ url: "https://mirnes-mrkaljevic.github.io"
 
 # Theme settings
 remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: "/page:num/"
 
 
 # Build settings
