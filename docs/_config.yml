@@ -2,7 +2,7 @@
 title: "Optimal Coder"
 description: "description"
 author: "Mirnes Mrkaljevic"
-baseurl: "/docs"  # Set this to "/blog" if your blog is in a subfolder
+baseurl: ""  # Set this to "/blog" if your blog is in a subfolder
 url: "https://mirnes-mrkaljevic.github.io"
 
 # Theme settings
