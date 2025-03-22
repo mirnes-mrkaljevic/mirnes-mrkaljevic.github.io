@@ -6,7 +6,7 @@ baseurl: "/docs"  # Set this to "/blog" if your blog is in a subfolder
 url: "https://mirnes-mrkaljevic.github.io"
 
 # Theme settings
-theme: jekyll-theme-cayman
+remote_theme: pages-themes/cayman@v0.2.0
 
 paginate: 5
 paginate_path: "/page:num/"
