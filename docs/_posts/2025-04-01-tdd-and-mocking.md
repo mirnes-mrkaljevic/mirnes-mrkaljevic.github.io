@@ -4,7 +4,7 @@ title:  "TDD and Mocking"
 date:   2025-04-01
 tags: [cleancode,csharp,tdd,unittesting,dependencyinjection,moq]
 ---
-In the [last post](https://dev.to/mirnes_mrkaljevic/unit-testing-and-test-driven-development-tdd-in-c-20b0) we have discussed core principles of unit testing and TDD. In this post, we’ll walk through a simple example of how to use **Moq**  as mocking framework and **Dependency Injection** with **NUnit** in the context of **Test-Driven Development (TDD)** in C#. This combination allows for clean, maintainable tests by mocking dependencies and focusing on the behavior of the system under test.
+In the [last post](https://mirnes-mrkaljevic.github.io/2025/03/24/unit-testing-and-test-driven-development-tdd-in-csharp.html) we have discussed core principles of unit testing and TDD. In this post, we’ll walk through a simple example of how to use **Moq**  as mocking framework and **Dependency Injection** with **NUnit** in the context of **Test-Driven Development (TDD)** in C#. This combination allows for clean, maintainable tests by mocking dependencies and focusing on the behavior of the system under test.
 
 Imagine we have an application where we process payments through a `PaymentService`. This service depends on an external `IPaymentGateway` interface to make the actual payment. 
 
