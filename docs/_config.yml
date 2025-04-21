@@ -30,6 +30,7 @@ github_username:  mirnes-mrkaljevic
 show_excerpts: true
 
 google_analytics: G-2686VMP48B
+permalink: /:title/
 
 # Build settings
 theme: minima 
@@ -37,6 +38,8 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
