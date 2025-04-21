@@ -10,7 +10,8 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2> -->
+  <input type="text" id="search-input" placeholder="Search posts..." />
+        <ul id="results-container"></ul>
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
@@ -31,3 +32,16 @@ layout: default
   {%- endif -%}
 
 </div>
+<script src="https://unpkg.com/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+
+<script>
+  var sjs = SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ "/search.json" | relative_url }}',
+    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+  });
+</script>

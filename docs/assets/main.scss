@@ -3,3 +3,33 @@
 ---
 
 @import "minima";
+
+#search-input {
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  #results-container {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .search-tag {
+    background: #e0f0ff;
+    padding: 4px 8px;
+    margin-right: 4px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #0366d6;
+  }
+  
+  .search-tag:hover {
+    background: #cce7ff;
+  }
+  #hidden-search-input{
+    display: none;
+  }

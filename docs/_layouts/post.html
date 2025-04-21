@@ -5,6 +5,7 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -24,4 +25,39 @@ layout: default
   {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+
+  {% if page.tags %}
+      <p class="post-tags">
+        Tags:
+        {% for tag in page.tags %}
+          <a href="#" class="search-tag" data-tag="{{ tag }}">{{ tag }}</a>{% unless forloop.last %} {% endunless %}
+        {% endfor %}
+      </p>
+      <input type="text" id="hidden-search-input"  />
+        <ul id="results-container"></ul>
+    {% endif %}
 </article>
+
+<script src="https://unpkg.com/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+
+<script>
+  
+  var sjs = SimpleJekyllSearch({
+    searchInput: document.getElementById('hidden-search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ "/search.json" | relative_url }}',
+    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+  });
+  document.querySelectorAll('.search-tag').forEach(tag => {
+    tag.addEventListener('click', function(e) {
+      e.preventDefault();
+      const term = this.dataset.tag;
+      document.getElementById('hidden-search-input').value = term;
+      // Trigger input event to run search
+      document.getElementById('hidden-search-input').dispatchEvent(new Event('input'));
+    });
+  });
+</script>
