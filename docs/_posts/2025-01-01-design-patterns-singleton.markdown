@@ -3,6 +3,7 @@ layout: post
 title:  "Design Patterns: Singleton"
 date:   2025-01-01
 tags: [csharp,softwaredevelopment,designpatterns,singleton]
+series: Design Patterns
 ---
 Tyipically the first design pattern most people learn, often wrongly ☺ To give an introduction, we can say that singleton is one of the creational design patterns which ensures only one class instance with single point of access thru entire application. 
 

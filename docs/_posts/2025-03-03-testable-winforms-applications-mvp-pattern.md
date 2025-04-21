@@ -3,6 +3,8 @@ layout: post
 title:  "Testable WinForms Applications (MVP pattern)"
 date:   2025-03-03
 tags: [csharp,designpatterns,mvp,winforms]
+series: Design Patterns
+
 ---
 Today, WinForms apps mainly belong to legacy code because of increasing popularity of WPF. And when one team decides about the development stack for the brand new desktop application, they mainly vote for WPF. On the other hand, there are demands for WinForms applications when it is needed to upgrade existing software which is tightly coupled with WinForms, demands for higher performance, etc.
 

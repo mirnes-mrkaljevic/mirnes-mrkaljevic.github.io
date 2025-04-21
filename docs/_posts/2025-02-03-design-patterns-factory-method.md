@@ -3,6 +3,8 @@ layout: post
 title:  "Design Patterns: Factory Method"
 date:   2025-02-03
 tags: [csharp,cleancode,designpatterns,factorymethod]
+series: "Design Patterns"
+
 ---
 
 Let’s continue our series on design patterns with the Factory Method. Like the [Builder](https://mirnes-mrkaljevic.github.io/2025/01/22/design-patterns-builder.html) or [Singleton](https://mirnes-mrkaljevic.github.io/2025/01/01/design-patterns-singleton.html) patterns we covered in previous posts, the Factory Method is also one of the creational patterns. It introduces a slightly more complex approach, offering a higher level of abstraction for object creation. Additionally, it helps decouple the object creation process from the rest of the application.

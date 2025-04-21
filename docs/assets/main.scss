@@ -92,5 +92,17 @@
   .subscription-box input[type="submit"]:hover {
     background-color: #024ea2;
   }
+
+  .series-box {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-top: 2em;
+    background: #f9f9f9;
+    border-radius: 5px;
+  }
+  
+  .series-box h3 {
+    margin-top: 0;
+  }
   
   

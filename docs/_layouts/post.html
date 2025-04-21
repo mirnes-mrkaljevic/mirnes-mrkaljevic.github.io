@@ -42,6 +42,21 @@ layout: default
         <ul id="results-container"></ul>
     {% endif %}
 
+    {% if page.series %}
+      <div class="series-box">
+        <h3>More from the "{{ page.series }}" series:</h3>
+        <ul>
+          {% assign current_series = page.series %}
+          {% assign series_posts = site.posts | sort: "date" | where: "series", current_series %}
+          {% for post in series_posts %}
+            {% if post.url != page.url %}
+              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
     
 
 </article>

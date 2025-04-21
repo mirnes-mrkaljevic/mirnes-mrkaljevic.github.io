@@ -3,6 +3,8 @@ layout: post
 title:  "Make Git Log Great (Again): Merge vs Rebase"
 date:   2025-01-15
 tags: [softwaredevelopment,versioncontrol,git]
+series: "Git"
+
 ---
 A well-maintained Git log is more than just a record of commits—it’s a story of your project’s growth, collaboration, and problem-solving. But as projects scale and teams grow, Git logs can become cluttered, making it harder to trace changes, understand context, or troubleshoot issues.
 

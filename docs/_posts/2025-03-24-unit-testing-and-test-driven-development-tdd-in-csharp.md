@@ -3,6 +3,8 @@ layout: post
 title:  "Unit Testing and Test-Driven Development (TDD) in C#"
 date:   2025-03-24
 tags: [cleancode,csharp,tdd,unittesting]
+series: "Unit testing and TDD"
+
 ---
 Writing code without unit tests can be risky—you might not realize issues until it’s too late. Unit testing helps make sure your code actually does what it's supposed to. In this post, we’ll break down unit testing in C# using NUnit and explore how Test-Driven Development (TDD) can make your life easier.
 

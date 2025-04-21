@@ -3,6 +3,8 @@ layout: post
 title:  "Design Patterns: Strategy"
 date:   2025-02-17
 tags: [cleancode,csharp,designpatterns,strategy]
+series: Design Patterns
+
 ---
 The Strategy Pattern is a behavioral design pattern that defines a family of algorithms, encapsulates each one, and makes them interchangeable. This pattern allows the algorithm to be selected at runtime, providing flexibility in designing software. It’s particularly useful when you have multiple ways of performing a task, and you want to choose the implementation dynamically without altering the client code.
 

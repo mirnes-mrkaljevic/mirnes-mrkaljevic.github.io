@@ -3,6 +3,7 @@ layout: post
 title:  "Book Reviews: Clean Code"
 date:   2025-01-08
 tags: [books,cleancode,softwaredevelopment,designprinciples]
+series: "Book reviews"
 ---
 Undoubtedly, one of the most popular books in software engineering, it teaches the fundamentals of software architecture, methods for organizing code, and is widely regarded as a must-read for any software developer. Written by Robert C. Martin, also known as "Uncle Bob," the full title of the book is "_[Clean Code: A Handbook of Agile Software Craftsmanship](https://amzn.eu/d/eoB3OjW)_".
 

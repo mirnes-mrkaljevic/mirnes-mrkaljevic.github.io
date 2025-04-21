@@ -3,6 +3,8 @@ layout: post
 title:  "Design Patterns: Decorator"
 date:   2025-03-10
 tags: [csharp,decorator,designpatterns,softwarearhitecture]
+series: Design Patterns
+
 ---
 
 The Decorator Pattern is a structural design pattern that allows behavior to be dynamically added to individual objects, without modifying their code. It is often used to extend the functionalities of classes in a flexible and reusable way.

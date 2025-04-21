@@ -3,6 +3,8 @@ layout: post
 title:  "Design Patterns: Prototype"
 date:   2025-04-14
 tags: [cleancode,csharp,designpatterns,prototype]
+series: Design Patterns
+
 ---
 
 In software development, there are scenarios where creating multiple objects with similar attributes and configurations is necessary. Instead of constructing each object from scratch, a more efficient approach is to duplicate an existing instance. This is precisely what the **Prototype Design Pattern** facilitates.

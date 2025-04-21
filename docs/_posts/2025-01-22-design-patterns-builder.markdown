@@ -3,6 +3,7 @@ layout: post
 title:  "Design Patterns: Builder"
 date:   2025-01-22
 tags: [builder,csharp,softwaredevelopment,designpatterns]
+series: Design Patterns
 ---
 This is also, like a [Singleton](https://mirnes-mrkaljevic.github.io/2025/01/01/design-patterns-singleton.html), one of the creational design patterns. It provides the way of creating complex objects step by step by simple chaining and every particular step is independent of other steps.
 
