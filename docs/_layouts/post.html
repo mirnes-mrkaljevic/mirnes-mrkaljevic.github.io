@@ -42,12 +42,17 @@ layout: default
         <ul id="results-container"></ul>
     {% endif %}
 
-    {% if page.series %}
+    {% assign current_series = page.series %}
+
+    {% if current_series %}
+    {% assign series_posts = site.posts | where: "series", current_series %}
+    {% assign other_series_posts = series_posts | where_exp: "post", "post.url != page.url" %}
+    {% if other_series_posts.size > 0 %}
+
       <div class="series-box">
+
         <h3>More from the "{{ page.series }}" series:</h3>
         <ul>
-          {% assign current_series = page.series %}
-          {% assign series_posts = site.posts | sort: "date" | where: "series", current_series %}
           {% for post in series_posts %}
             {% if post.url != page.url %}
               <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
@@ -55,6 +60,7 @@ layout: default
           {% endfor %}
         </ul>
       </div>
+      {% endif %}
     {% endif %}
 
     

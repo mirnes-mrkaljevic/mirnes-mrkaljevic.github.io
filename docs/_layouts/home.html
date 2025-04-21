@@ -23,7 +23,7 @@ layout: default
           </a>
         </h3>
         {%- if site.show_excerpts -%}
-          <p>{{ post.excerpt | strip_html | strip_newlines }} <a href="{{ post.url | relative_url }}">→</a></p>
+          <p>{{ post.excerpt | strip_html | strip_newlines }} <a title="Read more..." href="{{ post.url | relative_url }}">→</a></p>
 
 
         {%- endif -%}
