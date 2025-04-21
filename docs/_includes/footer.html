@@ -25,7 +25,13 @@
       <div class="footer-col footer-col-2">
         <p>{{- site.description | escape -}}</p>
         <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
+        <div class="subscription-box">
+          <h3>Subscribe to Updates</h3>
+          <form action="https://follow.it/yourusername?action=followPub" method="post" target="_blank">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="submit" value="Subscribe">
+          </form>
+        </div>
       </div>
 
       
