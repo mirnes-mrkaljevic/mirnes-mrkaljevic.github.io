@@ -3,6 +3,7 @@ layout: post
 title:  "Why Do Employers Lie In Interviews?"
 date:   2025-02-03
 tags: [developer,hiring,hr,interview]
+
 ---
 This is a very common subject that many of us have already experienced. But when you realize that half of what has been said at interviews is actually a lie, you are already at least six months in the company, you have already started some project and it wouldn’t be appropriate to leave the company at that moment.
 

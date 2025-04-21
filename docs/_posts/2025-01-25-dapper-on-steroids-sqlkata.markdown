@@ -28,7 +28,7 @@ class Program
 
 With the lack of flexibility in query construction, we would be in temptation to go for Entity Framework or some other heavy weight ORM, but there is also a simple library ([SqlKata](https://sqlkata.com/)) which provides a decent flexibility in query construction and also keeps a full control over the generated query and we don't need to trade of the execution speed. 
 
-The library itself is mostly based on [Builder Design Pattern](https://mirnes-mrkaljevic.github.io/2025/01/22/design-patterns-builder.html) that is used for constructing queries. In the code snipet below is a simple example how to use the library.
+The library itself is mostly based on [Builder Design Pattern](https://mirnes-mrkaljevic.github.io/design-patterns-builder) that is used for constructing queries. In the code snipet below is a simple example how to use the library.
 
 ```csharp
 var connection = new SqlConnection("connection string example");

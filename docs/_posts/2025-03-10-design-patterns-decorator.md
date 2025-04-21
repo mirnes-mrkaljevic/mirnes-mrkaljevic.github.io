@@ -23,7 +23,7 @@ The Decorator Pattern is a structural design pattern that allows behavior to be 
 
 - **The Object’s Behavior Doesn’t Change at Runtime.** If an object's behavior is fixed and won’t need modifications dynamically.
 - **The Number of Possible Combinations is Small**
-- **Alternative Patterns Are Simpler.** If you need different behaviors but don’t need stacking, the [strategy](https://mirnes-mrkaljevic.github.io/2025/02/17/design-patterns-strategy.html) pattern may be a better choice. If you have a few known configurations, a [factory](https://mirnes-mrkaljevic.github.io/2025/02/03/design-patterns-factory-method.html) might be more maintainable.
+- **Alternative Patterns Are Simpler.** If you need different behaviors but don’t need stacking, the [strategy](https://mirnes-mrkaljevic.github.io/design-patterns-strategy) pattern may be a better choice. If you have a few known configurations, a [factory](https://mirnes-mrkaljevic.github.io/design-patterns-factory-method) might be more maintainable.
   
 
 ## **Example in C#**
