@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Keep Your Database In Sync With Application: Fluent Migrator"
-date:   2025-02-05
+date:   2025-01-26
 tags: [csharp,database,migrations,entityframework]
 ---
-In this post, we continue to explore ways to free your application from being tightly bound to the Entity Framework environment. The primary goal is to offer an alternative solution that is not only more flexible and robust but also gives you, as a developer, greater control over database manipulation with less abstraction and complexity. Here, we introduce a library for database migrations, which serves as a natural extension to tools like [Dapper and SqlKata](https://mirnes-mrkaljevic.github.io/2025-01-29-dapper-on-steroids-sqlkata.html).
+In this post, we continue to explore ways to free your application from being tightly bound to the Entity Framework environment. The primary goal is to offer an alternative solution that is not only more flexible and robust but also gives you, as a developer, greater control over database manipulation with less abstraction and complexity. Here, we introduce a library for database migrations, which serves as a natural extension to tools like [Dapper and SqlKata](https://mirnes-mrkaljevic.github.io/2025/01/25/dapper-on-steroids-sqlkata.html).
 
 ## Fluent Migrator
 

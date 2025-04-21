@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Dapper On Steroids: SqlKata"
-date:   2025-01-29
+date:   2025-01-25
 tags: [csharp,sqlkata,dapper,entityframework]
 ---
 Dapper is a lightweight, high-performance ORM for .NET. It is widely used because of its simplicity and speed. Dapper in its essence provides simple mapping to POCO and works with raw queries minimizing the overhead. On the other hand it lacks of flexibility in terms of query writing, because we need to write queries like static strings. One simple example is shown in the code snippet below.
