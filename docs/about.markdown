@@ -4,15 +4,11 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Optimal Coder is a blog dedicated to software development, offering insights into coding practices, design principles, and industry challenges. The blog features articles on topics such as book overviews, design patterns, coding advisory and workplace dynamics.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+## About me
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+My name is Mirnes Mrkaljevic, currently based in Germany and working as a software engineer in the logistics sector. I am well-versed in C#, with experience in JavaScript and Angular as well. My passion lies in advising and crafting clean, maintainable code that is both easy to understand and extend. I am deeply committed to Test-Driven Development (TDD) and constantly exploring ways to enhance team efficiency and collaboration.
 
-
-[jekyll-organization]: https://github.com/jekyll
+## Let’s Connect!
+Feel free to reach out, share your thoughts in the comments, follow me on LinkedIn or <a class="u-email" href="mailto:{{ site.email }}">Email me</a>.

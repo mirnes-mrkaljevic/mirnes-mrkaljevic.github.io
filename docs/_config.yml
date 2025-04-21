@@ -19,6 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Optimal Coder
+author: Mirnes Mrkaljevic
 email: mrkaljevicmirnes@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is a blog dedicated to software development, offering insights into coding practices, design principles, and industry challenges.
@@ -26,6 +27,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mirnes-mrkaljevic.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: mirnes-mrkaljevic
 github_username:  mirnes-mrkaljevic
+show_excerpts: true
 
 # Build settings
 theme: minima 
