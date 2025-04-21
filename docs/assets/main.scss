@@ -33,3 +33,21 @@
   #hidden-search-input{
     display: none;
   }
+
+  .social-share {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 10px;
+  }
+  
+  .social-share .social-icon svg {
+    fill: currentColor;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-share .social-icon:hover svg {
+    transform: scale(1.2);
+    color: #0366d6;
+  }
+  

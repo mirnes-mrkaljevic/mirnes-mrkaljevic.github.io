@@ -26,6 +26,11 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 
+  <p class="post-tags">
+    {% include share.html %}
+  </p>
+  
+
   {% if page.tags %}
       <p class="post-tags">
         Tags:
@@ -36,6 +41,9 @@ layout: default
       <input type="text" id="hidden-search-input"  />
         <ul id="results-container"></ul>
     {% endif %}
+
+    
+
 </article>
 
 <script src="https://unpkg.com/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>

@@ -1,0 +1,19 @@
+<div class="social-share">
+    Share:
+    <a class="social-icon" href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ page.url }}" target="_blank" aria-label="Share on Twitter">
+      {% include social-icon.html icon="twitter" %}
+    </a>
+  
+    <a class="social-icon" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank" aria-label="Share on Facebook">
+      {% include social-icon.html icon="facebook" %}
+    </a>
+  
+    <a class="social-icon" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title | uri_escape }}" target="_blank" aria-label="Share on LinkedIn">
+      {% include social-icon.html icon="linkedin" %}
+    </a>
+  
+    <a class="social-icon" href="mailto:?subject={{ page.title | uri_escape }}&body={{ site.url }}{{ page.url }}" aria-label="Share via Email">
+      {% include social-icon.html icon="email" %}
+    </a>
+  </div>
+  
