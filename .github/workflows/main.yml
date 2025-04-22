@@ -1,0 +1,37 @@
+name: Daily Build for GitHub Pages
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # This runs at midnight UTC every day
+  workflow_dispatch:  # This allows you to trigger the build manually if needed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Choose the OS for the action to run on
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2  # Checks out your repository code
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0 # Specify your Ruby version if needed
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install  # Install your Jekyll dependencies
+
+      - name: Build the site
+        run: |
+          bundle exec jekyll build  # This will build the Jekyll site
+
+      - name: Deploy to GitHub Pages
+        run: |
+          bundle exec jekyll build
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "github-actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Daily build update"
+          git push origin main  # Make sure your default branch is correct
