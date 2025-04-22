@@ -30,7 +30,7 @@ github_username:  mirnes-mrkaljevic
 show_excerpts: true
 
 google_analytics: G-2686VMP48B
-permalink: /:title/
+permalink: /:title
 
 # Build settings
 theme: minima 
