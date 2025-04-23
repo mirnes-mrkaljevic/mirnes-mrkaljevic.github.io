@@ -18,7 +18,7 @@ We'll cover:
 
 - Creating a new .NET 9 Web API project  
 - Understanding the default project structure  
-- Setting up **FluentMigrator** using a **separate migrations library**  
+- Setting up **FluentMigrator**  
 - Writing and running your first database migration  
 
 
@@ -169,9 +169,6 @@ Sample.Api/
 Sample.Migrations/
 └── Sample.Migrations.csproj
 ```
-
-Your API handles HTTP traffic. Your migration project takes care of database schema changes. Nice and clean!
-
 
 {: .space }
 ## Step 3: Create Your First Migration
