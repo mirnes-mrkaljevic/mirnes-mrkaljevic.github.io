@@ -6,14 +6,14 @@ on:
   workflow_dispatch:  # This allows you to trigger the build manually if needed
 
 jobs:
-  trigger-pages:
+  auto-check-and-deploy:
     runs-on: ubuntu-latest  # Choose the OS for the action to run on
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2  # Checks out your repository code
 
-    - name: Insert timestamp to trigger github pages deploy
+      - name: Insert timestamp to trigger github pages deploy
         run: |
           echo "Triggered rebuild at $(date -u)" > docs/.trigger.txt
 
