@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    
+        Design Patterns: Decorator | Optimal Coder
+      
+  </title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Design Patterns: Decorator | Optimal Coder</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Design Patterns: Decorator" />
+<meta name="author" content="Mirnes Mrkaljevic" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Decorator Pattern is a structural design pattern that allows behavior to be dynamically added to individual objects, without modifying their code. It is often used to extend the functionalities of classes in a flexible and reusable way." />
+<meta property="og:description" content="The Decorator Pattern is a structural design pattern that allows behavior to be dynamically added to individual objects, without modifying their code. It is often used to extend the functionalities of classes in a flexible and reusable way." />
+<link rel="canonical" href="https://optimalcoder.net/design-patterns-decorator" />
+<meta property="og:url" content="https://optimalcoder.net/design-patterns-decorator" />
+<meta property="og:site_name" content="Optimal Coder" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Design Patterns: Decorator" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mirnes Mrkaljevic"},"dateModified":"2025-03-10T00:00:00+00:00","datePublished":"2025-03-10T00:00:00+00:00","description":"The Decorator Pattern is a structural design pattern that allows behavior to be dynamically added to individual objects, without modifying their code. It is often used to extend the functionalities of classes in a flexible and reusable way.","headline":"Design Patterns: Decorator","mainEntityOfPage":{"@type":"WebPage","@id":"https://optimalcoder.net/design-patterns-decorator"},"url":"https://optimalcoder.net/design-patterns-decorator"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://optimalcoder.net/feed.xml" title="Optimal Coder" /><link rel="icon" href="/assets/images/favicon.png" type="image/png">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Design Patterns: Decorator | Optimal Coder</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Design Patterns: Decorator" />
+<meta name="author" content="Mirnes Mrkaljevic" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Decorator Pattern is a structural design pattern that allows behavior to be dynamically added to individual objects, without modifying their code. It is often used to extend the functionalities of classes in a flexible and reusable way." />
+<meta property="og:description" content="The Decorator Pattern is a structural design pattern that allows behavior to be dynamically added to individual objects, without modifying their code. It is often used to extend the functionalities of classes in a flexible and reusable way." />
+<link rel="canonical" href="https://optimalcoder.net/design-patterns-decorator" />
+<meta property="og:url" content="https://optimalcoder.net/design-patterns-decorator" />
+<meta property="og:site_name" content="Optimal Coder" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-03-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Design Patterns: Decorator" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mirnes Mrkaljevic"},"dateModified":"2025-03-10T00:00:00+00:00","datePublished":"2025-03-10T00:00:00+00:00","description":"The Decorator Pattern is a structural design pattern that allows behavior to be dynamically added to individual objects, without modifying their code. It is often used to extend the functionalities of classes in a flexible and reusable way.","headline":"Design Patterns: Decorator","mainEntityOfPage":{"@type":"WebPage","@id":"https://optimalcoder.net/design-patterns-decorator"},"url":"https://optimalcoder.net/design-patterns-decorator"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Optimal Coder</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Design Patterns: Decorator</h1>
+    
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-03-10T00:00:00+00:00" itemprop="datePublished">Mar 10, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>The Decorator Pattern is a structural design pattern that allows behavior to be dynamically added to individual objects, without modifying their code. It is often used to extend the functionalities of classes in a flexible and reusable way.</p>
+
+<h2 id="when-to-use-it">When To Use It?</h2>
+
+<ul>
+  <li><strong>You Need to Add Behavior Dynamically at Runtime.</strong> Example: A coffee shop app where users can customize their drinks with add-ons like Milk, Sugar, Whipped Cream, etc.</li>
+  <li><strong>You Want to Avoid a Large Inheritance Tree.</strong>  If you use inheritance, each combination of behaviors would require a new subclass (e.g., <code class="language-plaintext highlighter-rouge">CoffeeWithMilk</code>, <code class="language-plaintext highlighter-rouge">CoffeeWithSugar</code>, <code class="language-plaintext highlighter-rouge">CoffeeWithMilkAndSugar</code>, etc.).</li>
+  <li><strong>You Want More Flexible and Reusable Code.</strong> Different decorators can be reused independently. Example: A LoggingDecorator, CompressionDecorator, and EncryptionDecorator can be used separately or in different orders.</li>
+  <li><strong>You Follow the Open-Closed Principle.</strong> Instead of modifying an existing class, you can extend behavior using decorators. This makes your code more maintainable.</li>
+  <li><strong>You Need to Combine Multiple Independent Behaviors.</strong> Example: A text editor where you can apply bold, italics, and underline without modifying the base class.</li>
+</ul>
+
+<h2 id="when-not-to-use-it">When Not To Use It?</h2>
+
+<ul>
+  <li><strong>The Object’s Behavior Doesn’t Change at Runtime.</strong> If an object’s behavior is fixed and won’t need modifications dynamically.</li>
+  <li><strong>The Number of Possible Combinations is Small</strong></li>
+  <li><strong>Alternative Patterns Are Simpler.</strong> If you need different behaviors but don’t need stacking, the <a href="https://mirnes-mrkaljevic.github.io/design-patterns-strategy">strategy</a> pattern may be a better choice. If you have a few known configurations, a <a href="https://mirnes-mrkaljevic.github.io/design-patterns-factory-method">factory</a> might be more maintainable.</li>
+</ul>
+
+<h2 id="example-in-c"><strong>Example in C#</strong></h2>
+
+<p><strong>Interface</strong></p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">interface</span> <span class="nc">ICoffee</span>
+<span class="p">{</span>
+    <span class="kt">string</span> <span class="nf">GetDescription</span><span class="p">();</span>
+    <span class="kt">double</span> <span class="nf">GetCost</span><span class="p">();</span>
+<span class="p">}</span>
+  
+</code></pre></div></div>
+
+<p><strong>Concrete Component Implementation</strong></p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">SimpleCoffee</span> <span class="p">:</span> <span class="n">ICoffee</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="nf">GetDescription</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"Simple Coffee"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="kt">double</span> <span class="nf">GetCost</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="m">5.0</span><span class="p">;</span> <span class="c1">// Base price of coffee</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p><strong>Abstract Decorator</strong></p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">CoffeeDecorator</span> <span class="p">:</span> <span class="n">ICoffee</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="n">ICoffee</span> <span class="n">_coffee</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="nf">CoffeeDecorator</span><span class="p">(</span><span class="n">ICoffee</span> <span class="n">coffee</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">_coffee</span> <span class="p">=</span> <span class="n">coffee</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">virtual</span> <span class="kt">string</span> <span class="nf">GetDescription</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_coffee</span><span class="p">.</span><span class="nf">GetDescription</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">virtual</span> <span class="kt">double</span> <span class="nf">GetCost</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_coffee</span><span class="p">.</span><span class="nf">GetCost</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p><strong>Concrete Decorators</strong></p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">MilkDecorator</span> <span class="p">:</span> <span class="n">CoffeeDecorator</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nf">MilkDecorator</span><span class="p">(</span><span class="n">ICoffee</span> <span class="n">coffee</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">coffee</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">GetDescription</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_coffee</span><span class="p">.</span><span class="nf">GetDescription</span><span class="p">()</span> <span class="p">+</span> <span class="s">", Milk"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">override</span> <span class="kt">double</span> <span class="nf">GetCost</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_coffee</span><span class="p">.</span><span class="nf">GetCost</span><span class="p">()</span> <span class="p">+</span> <span class="m">1.5</span><span class="p">;</span> <span class="c1">// Extra cost for milk</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">SugarDecorator</span> <span class="p">:</span> <span class="n">CoffeeDecorator</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="nf">SugarDecorator</span><span class="p">(</span><span class="n">ICoffee</span> <span class="n">coffee</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">coffee</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">GetDescription</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_coffee</span><span class="p">.</span><span class="nf">GetDescription</span><span class="p">()</span> <span class="p">+</span> <span class="s">", Sugar"</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">override</span> <span class="kt">double</span> <span class="nf">GetCost</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="n">_coffee</span><span class="p">.</span><span class="nf">GetCost</span><span class="p">()</span> <span class="p">+</span> <span class="m">0.5</span><span class="p">;</span> <span class="c1">// Extra cost for sugar</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p><strong>Client</strong></p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Program</span>
+<span class="p">{</span>
+    <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// Create a simple coffee</span>
+        <span class="n">ICoffee</span> <span class="n">coffee</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SimpleCoffee</span><span class="p">();</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">$"</span><span class="p">{</span><span class="n">coffee</span><span class="p">.</span><span class="nf">GetDescription</span><span class="p">()}</span><span class="s"> - $</span><span class="p">{</span><span class="n">coffee</span><span class="p">.</span><span class="nf">GetCost</span><span class="p">()}</span><span class="s">"</span><span class="p">);</span>
+
+        <span class="c1">// Add milk to the coffee</span>
+        <span class="n">coffee</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MilkDecorator</span><span class="p">(</span><span class="n">coffee</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">$"</span><span class="p">{</span><span class="n">coffee</span><span class="p">.</span><span class="nf">GetDescription</span><span class="p">()}</span><span class="s"> - $</span><span class="p">{</span><span class="n">coffee</span><span class="p">.</span><span class="nf">GetCost</span><span class="p">()}</span><span class="s">"</span><span class="p">);</span>
+
+        <span class="c1">// Add sugar to the coffee</span>
+        <span class="n">coffee</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SugarDecorator</span><span class="p">(</span><span class="n">coffee</span><span class="p">);</span>
+        <span class="n">Console</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">$"</span><span class="p">{</span><span class="n">coffee</span><span class="p">.</span><span class="nf">GetDescription</span><span class="p">()}</span><span class="s"> - $</span><span class="p">{</span><span class="n">coffee</span><span class="p">.</span><span class="nf">GetCost</span><span class="p">()}</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The Decorator Pattern is a great tool for extending functionality dynamically while keeping the base code clean and modular. It is widely used in the .NET Core framework and its libraries to provide flexible and extendable functionality. Some of the usages are:</p>
+
+<ul>
+  <li><strong>Middleware Pipeline</strong> ,  app.UseMiddleware()</li>
+  <li><strong>Logging</strong>, <code class="language-plaintext highlighter-rouge">ILogger</code> with multiple providers (<code class="language-plaintext highlighter-rouge">Console</code>, <code class="language-plaintext highlighter-rouge">Debug</code>, etc.)</li>
+  <li><strong>Caching</strong>, <code class="language-plaintext highlighter-rouge">IMemoryCache</code>, <code class="language-plaintext highlighter-rouge">IDistributedCache</code></li>
+</ul>
+
+  </div><a class="u-url" href="/design-patterns-decorator" hidden></a>
+
+  <p class="post-tags">
+    <div class="social-share">
+    Share:
+    <a class="social-icon" href="https://twitter.com/intent/tweet?text=Design%20Patterns:%20Decorator&url=https://optimalcoder.net/design-patterns-decorator" target="_blank" aria-label="Share on Twitter">
+      
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
+      <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.29 3.9A12.14 12.14 0 013 5.15a4.28 4.28 0 001.32 5.71 4.27 4.27 0 01-1.94-.54v.05a4.28 4.28 0 003.43 4.19 4.29 4.29 0 01-1.93.07 4.28 4.28 0 004 2.97A8.6 8.6 0 012 19.54a12.15 12.15 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.38-.01-.57A8.7 8.7 0 0024 5.52a8.45 8.45 0 01-2.54.7z"/>
+    </svg>
+
+  
+
+    </a>
+  
+    <a class="social-icon" href="https://www.facebook.com/sharer/sharer.php?u=https://optimalcoder.net/design-patterns-decorator" target="_blank" aria-label="Share on Facebook">
+      
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
+      <path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-2.9h2.5V9.4c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6v1.9h3l-.5 2.9h-2.5v7A10 10 0 0022 12z"/>
+    </svg>
+
+  
+
+    </a>
+  
+    <a class="social-icon" href="https://www.linkedin.com/shareArticle?mini=true&url=https://optimalcoder.net/design-patterns-decorator&title=Design%20Patterns:%20Decorator" target="_blank" aria-label="Share on LinkedIn">
+      
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
+      <path d="M20.45 20.45h-3.6v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.5h-3.6V9h3.5v1.6h.1a3.8 3.8 0 013.4-1.8c3.6 0 4.2 2.4 4.2 5.5v6.1zM5.34 7.43a2.1 2.1 0 112.1-2.1 2.1 2.1 0 01-2.1 2.1zM6.94 20.45H3.74V9h3.2v11.45z"/>
+    </svg>
+
+  
+
+    </a>
+  
+    <a class="social-icon" href="mailto:?subject=Design%20Patterns:%20Decorator&body=https://optimalcoder.net/design-patterns-decorator" aria-label="Share via Email">
+      
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
+      <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 5 8-5v10H4z"/>
+    </svg>
+
+
+    </a>
+  </div>
+  
+  </p>
+  
+
+  
+      <p class="post-tags">
+        Tags:
+        
+          <a href="#" class="search-tag" data-tag="csharp">csharp</a>
+        
+          <a href="#" class="search-tag" data-tag="decorator">decorator</a>
+        
+          <a href="#" class="search-tag" data-tag="designpatterns">designpatterns</a>
+        
+          <a href="#" class="search-tag" data-tag="softwarearhitecture">softwarearhitecture</a>
+        
+      </p>
+      <input type="text" id="hidden-search-input"  />
+        <ul id="results-container"></ul>
+    
+
+    
+
+    
+    
+    
+    
+
+      <div class="series-box">
+
+        <h3>More from the "Design Patterns" series:</h3>
+        <ul>
+          
+            
+              <li><a href="/design-patterns-prototype">Design Patterns: Prototype</a></li>
+            
+          
+            
+          
+            
+              <li><a href="/testable-winforms-applications-mvp-pattern">Testable WinForms Applications (MVP pattern)</a></li>
+            
+          
+            
+              <li><a href="/design-patterns-strategy">Design Patterns: Strategy</a></li>
+            
+          
+            
+              <li><a href="/design-patterns-factory-method">Design Patterns: Factory Method</a></li>
+            
+          
+            
+              <li><a href="/design-patterns-builder">Design Patterns: Builder</a></li>
+            
+          
+            
+              <li><a href="/design-patterns-singleton">Design Patterns: Singleton</a></li>
+            
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+</article>
+
+<script src="https://unpkg.com/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+
+<script>
+  
+  var sjs = SimpleJekyllSearch({
+    searchInput: document.getElementById('hidden-search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+  });
+  document.querySelectorAll('.search-tag').forEach(tag => {
+    tag.addEventListener('click', function(e) {
+      e.preventDefault();
+      const term = this.dataset.tag;
+      document.getElementById('hidden-search-input').value = term;
+      // Trigger input event to run search
+      document.getElementById('hidden-search-input').dispatchEvent(new Event('input'));
+    });
+  });
+</script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Optimal Coder</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Mirnes Mrkaljevic</li><li><a class="u-email" href="mailto:mrkaljevicmirnes@gmail.com">mrkaljevicmirnes@gmail.com</a></li></ul><ul class="social-media-list"><li><a href="https://github.com/mirnes-mrkaljevic"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">mirnes-mrkaljevic</span></a></li><li><a href="https://www.linkedin.com/in/mirnes-mrkaljevic"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">mirnes-mrkaljevic</span></a></li></ul>
+<p>This is a blog dedicated to software development, offering insights into coding practices, design principles, and industry challenges.</p>
+        
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+
+        <div class="subscription-box">
+          <h3>Subscribe to Updates</h3>
+          <form data-v-f39c1850="" action="https://api.follow.it/subscription-form/NE44NElrTG1CdmovMjF6R3hRc3ZlVVRGbmZPS0lVdHVKVGtnODRMMGtVeGplOCtXcmJzMFR5cmxQR3dNZHduaUxZU3VRTkJDT1pxMElkVElWbWM5ZGFxNUFxVXJLN1FWSFE5aUFFTHIzaE5zY1BrSE9vNklxTVFMQ1JOeEN2Vi98Nm8wU0tXNG9zNmtraDBia0ZReVg1QlhId0MxNE14dFg1YWVQSElDVXVhQT0=/8" method="post">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="submit" value="Subscribe">
+          </form>
+        </div>
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+
+</footer>
+</body>
+
+</html>

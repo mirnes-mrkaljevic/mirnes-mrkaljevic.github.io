@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    
+        Code Review Best Practices | Optimal Coder
+      
+  </title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Code Review Best Practices | Optimal Coder</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Code Review Best Practices" />
+<meta name="author" content="Mirnes Mrkaljevic" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Code reviews are a crucial part of writing great software. They help maintain code quality, catch bugs early, and improve collaboration. But if done poorly, they can be frustrating, time-consuming, and even demotivating. So, how do you make your code reviews effective and useful?" />
+<meta property="og:description" content="Code reviews are a crucial part of writing great software. They help maintain code quality, catch bugs early, and improve collaboration. But if done poorly, they can be frustrating, time-consuming, and even demotivating. So, how do you make your code reviews effective and useful?" />
+<link rel="canonical" href="https://optimalcoder.net/code-review-best-practices" />
+<meta property="og:url" content="https://optimalcoder.net/code-review-best-practices" />
+<meta property="og:site_name" content="Optimal Coder" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Code Review Best Practices" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mirnes Mrkaljevic"},"dateModified":"2025-04-07T00:00:00+00:00","datePublished":"2025-04-07T00:00:00+00:00","description":"Code reviews are a crucial part of writing great software. They help maintain code quality, catch bugs early, and improve collaboration. But if done poorly, they can be frustrating, time-consuming, and even demotivating. So, how do you make your code reviews effective and useful?","headline":"Code Review Best Practices","mainEntityOfPage":{"@type":"WebPage","@id":"https://optimalcoder.net/code-review-best-practices"},"url":"https://optimalcoder.net/code-review-best-practices"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://optimalcoder.net/feed.xml" title="Optimal Coder" /><link rel="icon" href="/assets/images/favicon.png" type="image/png">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Code Review Best Practices | Optimal Coder</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Code Review Best Practices" />
+<meta name="author" content="Mirnes Mrkaljevic" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Code reviews are a crucial part of writing great software. They help maintain code quality, catch bugs early, and improve collaboration. But if done poorly, they can be frustrating, time-consuming, and even demotivating. So, how do you make your code reviews effective and useful?" />
+<meta property="og:description" content="Code reviews are a crucial part of writing great software. They help maintain code quality, catch bugs early, and improve collaboration. But if done poorly, they can be frustrating, time-consuming, and even demotivating. So, how do you make your code reviews effective and useful?" />
+<link rel="canonical" href="https://optimalcoder.net/code-review-best-practices" />
+<meta property="og:url" content="https://optimalcoder.net/code-review-best-practices" />
+<meta property="og:site_name" content="Optimal Coder" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-07T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Code Review Best Practices" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Mirnes Mrkaljevic"},"dateModified":"2025-04-07T00:00:00+00:00","datePublished":"2025-04-07T00:00:00+00:00","description":"Code reviews are a crucial part of writing great software. They help maintain code quality, catch bugs early, and improve collaboration. But if done poorly, they can be frustrating, time-consuming, and even demotivating. So, how do you make your code reviews effective and useful?","headline":"Code Review Best Practices","mainEntityOfPage":{"@type":"WebPage","@id":"https://optimalcoder.net/code-review-best-practices"},"url":"https://optimalcoder.net/code-review-best-practices"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Optimal Coder</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Code Review Best Practices</h1>
+    
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-04-07T00:00:00+00:00" itemprop="datePublished">Apr 7, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Code reviews are a crucial part of writing great software. They help maintain code quality, catch bugs early, and improve collaboration. But if done poorly, they can be frustrating, time-consuming, and even demotivating. So, how do you make your code reviews effective and useful?</p>
+
+<h2 id="what-to-do">What to Do?</h2>
+
+<h3 id="1-prioritize-code-quality-and-maintainability">1. <strong>Prioritize Code Quality and Maintainability</strong></h3>
+
+<ul>
+  <li>
+    <p>Make sure the code follows best practices and style guidelines.</p>
+  </li>
+  <li>
+    <p>Check for ways to improve performance and efficiency.</p>
+  </li>
+  <li>
+    <p>Ensure the code is easy to read and well-structured.</p>
+  </li>
+</ul>
+
+<h3 id="2-give-constructive-respectful-feedback">2. <strong>Give Constructive, Respectful Feedback</strong></h3>
+
+<ul>
+  <li>
+    <p>Focus on helping, not just pointing out mistakes.</p>
+  </li>
+  <li>
+    <p>Offer suggestions rather than just criticism.</p>
+  </li>
+  <li>
+    <p>Highlight things that were done well, not just areas that need improvement.</p>
+  </li>
+</ul>
+
+<h3 id="3-ensure-the-code-is-properly-tested">3. <strong>Ensure the Code is Properly Tested</strong></h3>
+
+<ul>
+  <li>
+    <p>Look for unit tests and integration tests where needed.</p>
+  </li>
+  <li>
+    <p>Check for edge cases and possible failure points.</p>
+  </li>
+  <li>
+    <p>Make sure tests actually pass before approving the PR.</p>
+  </li>
+</ul>
+
+<h3 id="4-look-out-for-security-and-performance-issues">4. <strong>Look Out for Security and Performance Issues</strong></h3>
+
+<ul>
+  <li>
+    <p>Watch for common security risks like SQL injection, XSS, and hardcoded secrets.</p>
+  </li>
+  <li>
+    <p>Keep an eye on database queries and API calls for efficiency.</p>
+  </li>
+  <li>
+    <p>Avoid unnecessary complexity that could slow things down.</p>
+  </li>
+</ul>
+
+<h3 id="5-make-sure-the-code-solves-the-right-problem">5. <strong>Make Sure the Code Solves the Right Problem</strong></h3>
+
+<ul>
+  <li>
+    <p>Confirm that the implementation matches the requirements.</p>
+  </li>
+  <li>
+    <p>If there are UI changes, make sure they align with design specs.</p>
+  </li>
+  <li>
+    <p>Double-check that the solution is practical and efficient.</p>
+  </li>
+</ul>
+
+<h3 id="6-encourage-small-manageable-prs">6. <strong>Encourage Small, Manageable PRs</strong></h3>
+
+<ul>
+  <li>
+    <p>Reviewing smaller pull requests is faster and more effective.</p>
+  </li>
+  <li>
+    <p>Give feedback promptly so you don’t block progress.</p>
+  </li>
+  <li>
+    <p>Encourage breaking big changes into smaller, focused updates.</p>
+  </li>
+</ul>
+
+<h3 id="7-use-automation-to-catch-basic-issues">7. <strong>Use Automation to Catch Basic Issues</strong></h3>
+
+<ul>
+  <li>
+    <p>Rely on linters and static analysis tools for style enforcement.</p>
+  </li>
+  <li>
+    <p>Let CI/CD pipelines handle basic testing and code coverage checks.</p>
+  </li>
+  <li>
+    <p>Automate formatting so you don’t have to waste time on minor faults.</p>
+  </li>
+</ul>
+
+<h2 id="what-not-to-do">What Not to Do?</h2>
+
+<h3 id="1-dont-make-it-personal">1. <strong>Don’t Make It Personal</strong></h3>
+
+<ul>
+  <li>
+    <p>Critique the code, not the developer.</p>
+  </li>
+  <li>
+    <p>Use respectful, inclusive language.</p>
+  </li>
+  <li>
+    <p>Remember that everyone, no matter how experienced, makes mistakes.</p>
+  </li>
+</ul>
+
+<h3 id="2-dont-rush-through-the-review">2. <strong>Don’t Rush Through The Review</strong></h3>
+
+<ul>
+  <li>
+    <p>Take the time to understand the code before commenting.</p>
+  </li>
+  <li>
+    <p>Avoid approvals without actually checking the details.</p>
+  </li>
+  <li>
+    <p>Make sure your feedback is clear and actionable.</p>
+  </li>
+</ul>
+
+<h3 id="3-dont-hold-up-reviews-for-too-long">3. <strong>Don’t Hold Up Reviews For Too Long</strong></h3>
+
+<ul>
+  <li>
+    <p>Give feedback as soon as possible to keep things moving.</p>
+  </li>
+  <li>
+    <p>If you’re busy, let the team know so they can adjust expectations.</p>
+  </li>
+</ul>
+
+<h3 id="4-dont-expect-perfection-right-away">4. <strong>Don’t Expect Perfection Right Away</strong></h3>
+
+<ul>
+  <li>
+    <p>It’s okay if the first draft isn’t perfect—focus on incremental improvements.</p>
+  </li>
+  <li>
+    <p>Balance high standards with realistic expectations.</p>
+  </li>
+</ul>
+
+<h3 id="5-dont-overcomplicate-things">5. <strong>Don’t Overcomplicate Things</strong></h3>
+
+<ul>
+  <li>
+    <p>Keep suggestions practical and easy to follow.</p>
+  </li>
+  <li>
+    <p>Avoid unnecessary refactoring unless it truly improves the code.</p>
+  </li>
+</ul>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+
+<p>Code reviews should be a positive, collaborative process. They’re not just about finding mistakes—they’re about making the code better and helping each other grow as developers. Keep feedback constructive, focus on maintainability, and use automation where you can to make the process smoother. Most importantly, remember that you are all on the same team, and that you are improving your product together.</p>
+
+<p>Happy coding and happy reviewing!</p>
+
+  </div><a class="u-url" href="/code-review-best-practices" hidden></a>
+
+  <p class="post-tags">
+    <div class="social-share">
+    Share:
+    <a class="social-icon" href="https://twitter.com/intent/tweet?text=Code%20Review%20Best%20Practices&url=https://optimalcoder.net/code-review-best-practices" target="_blank" aria-label="Share on Twitter">
+      
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
+      <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.29 3.9A12.14 12.14 0 013 5.15a4.28 4.28 0 001.32 5.71 4.27 4.27 0 01-1.94-.54v.05a4.28 4.28 0 003.43 4.19 4.29 4.29 0 01-1.93.07 4.28 4.28 0 004 2.97A8.6 8.6 0 012 19.54a12.15 12.15 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.38-.01-.57A8.7 8.7 0 0024 5.52a8.45 8.45 0 01-2.54.7z"/>
+    </svg>
+
+  
+
+    </a>
+  
+    <a class="social-icon" href="https://www.facebook.com/sharer/sharer.php?u=https://optimalcoder.net/code-review-best-practices" target="_blank" aria-label="Share on Facebook">
+      
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
+      <path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-2.9h2.5V9.4c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6v1.9h3l-.5 2.9h-2.5v7A10 10 0 0022 12z"/>
+    </svg>
+
+  
+
+    </a>
+  
+    <a class="social-icon" href="https://www.linkedin.com/shareArticle?mini=true&url=https://optimalcoder.net/code-review-best-practices&title=Code%20Review%20Best%20Practices" target="_blank" aria-label="Share on LinkedIn">
+      
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
+      <path d="M20.45 20.45h-3.6v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.5h-3.6V9h3.5v1.6h.1a3.8 3.8 0 013.4-1.8c3.6 0 4.2 2.4 4.2 5.5v6.1zM5.34 7.43a2.1 2.1 0 112.1-2.1 2.1 2.1 0 01-2.1 2.1zM6.94 20.45H3.74V9h3.2v11.45z"/>
+    </svg>
+
+  
+
+    </a>
+  
+    <a class="social-icon" href="mailto:?subject=Code%20Review%20Best%20Practices&body=https://optimalcoder.net/code-review-best-practices" aria-label="Share via Email">
+      
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
+      <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 5 8-5v10H4z"/>
+    </svg>
+
+
+    </a>
+  </div>
+  
+  </p>
+  
+
+  
+      <p class="post-tags">
+        Tags:
+        
+          <a href="#" class="search-tag" data-tag="cleancode">cleancode</a>
+        
+          <a href="#" class="search-tag" data-tag="codereview">codereview</a>
+        
+          <a href="#" class="search-tag" data-tag="coding">coding</a>
+        
+          <a href="#" class="search-tag" data-tag="developer">developer</a>
+        
+      </p>
+      <input type="text" id="hidden-search-input"  />
+        <ul id="results-container"></ul>
+    
+
+    
+
+    
+
+    
+
+</article>
+
+<script src="https://unpkg.com/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+
+<script>
+  
+  var sjs = SimpleJekyllSearch({
+    searchInput: document.getElementById('hidden-search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+  });
+  document.querySelectorAll('.search-tag').forEach(tag => {
+    tag.addEventListener('click', function(e) {
+      e.preventDefault();
+      const term = this.dataset.tag;
+      document.getElementById('hidden-search-input').value = term;
+      // Trigger input event to run search
+      document.getElementById('hidden-search-input').dispatchEvent(new Event('input'));
+    });
+  });
+</script>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Optimal Coder</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Mirnes Mrkaljevic</li><li><a class="u-email" href="mailto:mrkaljevicmirnes@gmail.com">mrkaljevicmirnes@gmail.com</a></li></ul><ul class="social-media-list"><li><a href="https://github.com/mirnes-mrkaljevic"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">mirnes-mrkaljevic</span></a></li><li><a href="https://www.linkedin.com/in/mirnes-mrkaljevic"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg> <span class="username">mirnes-mrkaljevic</span></a></li></ul>
+<p>This is a blog dedicated to software development, offering insights into coding practices, design principles, and industry challenges.</p>
+        
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+
+        <div class="subscription-box">
+          <h3>Subscribe to Updates</h3>
+          <form data-v-f39c1850="" action="https://api.follow.it/subscription-form/NE44NElrTG1CdmovMjF6R3hRc3ZlVVRGbmZPS0lVdHVKVGtnODRMMGtVeGplOCtXcmJzMFR5cmxQR3dNZHduaUxZU3VRTkJDT1pxMElkVElWbWM5ZGFxNUFxVXJLN1FWSFE5aUFFTHIzaE5zY1BrSE9vNklxTVFMQ1JOeEN2Vi98Nm8wU0tXNG9zNmtraDBia0ZReVg1QlhId0MxNE14dFg1YWVQSElDVXVhQT0=/8" method="post">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="submit" value="Subscribe">
+          </form>
+        </div>
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+
+</footer>
+</body>
+
+</html>
