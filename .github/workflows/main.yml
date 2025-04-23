@@ -24,18 +24,7 @@ jobs:
           cd docs  # Change directory to docs folder
           bundle install  # Install dependencies from the Gemfile in docs folder
 
-      - name: Build the site
+      - name: Build site (just to test, not to deploy)
         run: |
-          cd docs  # Ensure we're in the docs folder
-          bundle exec jekyll build --destination ./docs  # Build the site into the docs folder
-
-      - name: Deploy to GitHub Pages
-        run: |
-          bundle exec jekyll build  --destination ./docs
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "github-actions@users.noreply.github.com"
-          git add -A
-          git commit -m "Daily build update"
-          git push origin main  # Make sure your default branch is correct
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          cd docs
+          bundle exec jekyll build
