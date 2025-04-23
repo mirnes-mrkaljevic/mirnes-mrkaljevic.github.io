@@ -2,7 +2,7 @@
 layout: post
 title: "Web API Project Setup and Migrations"
 date: 2025-04-28
-tags: [dotnet9,cleancode,csharp,designpatterns,sofwaredevelopment,softwaredesign,fluentmigrator,migrations]
+tags: [dotnet,dotnet9,cleancode,csharp,softwaredesign,fluentmigrator,migrations]
 series: "Web API – Step-by-Step Best Practices: Part 1"
 ---
 

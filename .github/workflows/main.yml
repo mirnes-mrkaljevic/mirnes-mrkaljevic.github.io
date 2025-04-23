@@ -31,7 +31,6 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          cd docs
           bundle exec jekyll build  --destination ./docs
           git config --global user.name "GitHub Actions"
           git config --global user.email "github-actions@users.noreply.github.com"
