@@ -6,25 +6,23 @@ on:
   workflow_dispatch:  # This allows you to trigger the build manually if needed
 
 jobs:
-  build:
+  auto-check-and-deploy:
     runs-on: ubuntu-latest  # Choose the OS for the action to run on
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2  # Checks out your repository code
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2.8 # Specify your Ruby version if needed
-
-      - name: Install dependencies
+    - name: Insert timestamp to trigger github pages deploy
         run: |
-          gem install bundler
-          cd docs  # Change directory to docs folder
-          bundle install  # Install dependencies from the Gemfile in docs folder
+          echo "Triggered rebuild at $(date -u)" > docs/.trigger.txt
 
-      - name: Build site (just to test, not to deploy)
+      - name: Commit and push
         run: |
-          cd docs
-          bundle exec jekyll build
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/.trigger.txt
+          git commit -m "Daily rebuild trigger"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
