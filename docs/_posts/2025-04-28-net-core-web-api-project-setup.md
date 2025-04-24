@@ -29,8 +29,7 @@ We'll cover:
 Start by creating a new Web API project using the .NET CLI:
 
 ```bash
-dotnet new webapi -n Sample.Api
-cd Sample.Api
+dotnet new webapi -n Sample.Api --use-controllers
 ```
 
 {: .space }
@@ -45,6 +44,9 @@ Sample.Api/
 ├── Program.cs
 ├── appsettings.json
 └── Sample.Api.csproj
+.
+.
+.
 ```
 {: .space }
 ### `Program.cs`
@@ -56,23 +58,26 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.MapOpenApi();
 }
+
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
+
 ```
 
 Let’s break it down:
@@ -81,11 +86,13 @@ Let’s break it down:
   
 - `builder.Services.AddControllers();` adds support for controllers, enabling your Web API to handle incoming HTTP requests.
 
-- `builder.Services.AddEndpointsApiExplorer();` and `builder.Services.AddSwaggerGen();` add Swagger support for generating API documentation. This is useful for testing and exploring your API.
+-  `builder.Services.AddOpenApi(); `, this is simplified in dotnet 9, and used instead of `builder.Services.AddEndpointsApiExplorer();` and `builder.Services.AddSwaggerGen();`. It adds Swagger support for generating API documentation. This is useful for testing and exploring your API.
 
 - `var app = builder.Build();` builds the `WebApplication` object, finalizing the app configuration and preparing it for running.
 
-- `if (app.Environment.IsDevelopment()) { app.UseSwagger(); app.UseSwaggerUI(); }` enables Swagger UI for development environments, making it easy to explore and test the API.
+- `if (app.Environment.IsDevelopment()) { app.MapOpenApi(); // same as app.UseSwagger(); app.UseSwaggerUI(); }` enables Swagger UI for development environments, making it easy to explore and test the API.
+
+- `app.UseHttpsRedirection();` redirecs all http requests to https
 
 - `app.UseAuthorization();` adds middleware for handling authorization, which is necessary if your API needs to control access to certain routes.
 
@@ -233,8 +240,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services
 builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+builder.Services.AddOpenApi();
 
 // Configure FluentMigrator using the separate migrations project
 builder.Services.AddFluentMigratorCore()
@@ -256,9 +263,10 @@ using (var scope = app.Services.CreateScope())
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.MapOpenApi();
 }
+
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 app.MapControllers();
