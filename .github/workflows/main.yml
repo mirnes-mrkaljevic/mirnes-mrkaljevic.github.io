@@ -1,8 +1,8 @@
-name: Daily Build for GitHub Pages
+name: Monday Build for GitHub Pages
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # This runs at midnight UTC every day
+    - cron: "0 0 * * MON"  # This runs at midnight UTC every Monday
   workflow_dispatch:  # This allows you to trigger the build manually if needed
 
 jobs:
