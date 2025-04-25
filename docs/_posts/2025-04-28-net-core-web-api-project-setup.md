@@ -3,7 +3,7 @@ layout: post
 title: "Web API Project Setup and Migrations"
 date: 2025-04-28
 tags: [dotnet,dotnet9,cleancode,csharp,softwaredesign,fluentmigrator,migrations]
-series: "Web API – Step-by-Step Best Practices: Part 1"
+series: "Web API – Step-by-Step Best Practices"
 ---
 
 Welcome to the first post in the **“Web API – Step-by-Step Best Practices”** series. In this series, we’ll walk through building a modern, clean, and maintainable Web API using .NET 9. Each post will focus on a specific aspect—from project setup and architecture to testing, migrations, and deployment.
@@ -92,7 +92,7 @@ Let’s break it down:
 
 - `if (app.Environment.IsDevelopment()) { app.MapOpenApi(); // same as app.UseSwagger(); app.UseSwaggerUI(); }` enables Swagger UI for development environments, making it easy to explore and test the API.
 
-- `app.UseHttpsRedirection();` redirecs all http requests to https
+- `app.UseHttpsRedirection();` redirects all http requests to https
 
 - `app.UseAuthorization();` adds middleware for handling authorization, which is necessary if your API needs to control access to certain routes.
 
@@ -123,22 +123,22 @@ This file is used for configuration—stuff like connection strings, logging, an
 
 ### `Controllers/`
 
-This folder holds your API endpoints. It’s where we’ll define controllers, but we’ll keep them thin by offloading logic to other layers.
+This folder holds your API endpoints. It’s where we’ll define controllers.
 
 
 {: .space }
 ## Step 2: Create a Separate Migrations Project
 
-We want to keep our code **modular and focused**, so we’ll separate database migration logic from our main Web API project. That means creating a **dedicated class library** just for migrations.
+We want to keep our code **modular and focused**, so we’ll separate database migration logic from our main Web API project and create a **dedicated class library** just for migrations.
 
 {: .space }
 ###  Why put migrations in a separate class library?
 
-Here are a couple of solid reasons:
+Here are a couple of reasons:
 
 - **Separation of concerns**: Your Web API project should focus on handling HTTP requests and responses—not managing database schema. Keeping migrations in their own project ensures the API stays lean and focused.
 - **Cleaner dependencies**: The migration project will only reference what's needed for database changes.
-- **Better organization**: As your project grows, having migrations tucked away in a dedicated folder or project keeps things easier to manage and navigate.
+- **Better organization**: As your project grows, having migrations away from API, in a dedicated project, keeps things easier to manage and navigate.
 
 
 {: .space }
@@ -211,7 +211,7 @@ public class InitialMigration : Migration
 The number you pass into the `[Migration(...)]` attribute is a unique ID for the migration. A common and helpful naming convention is to use a **timestamp** format, followed by a sequence number. Example:
 
 ```
-YYYYMMDDHHmm + sequence
+YYYYMMDD + sequence
 ```
 
 So in our case:
@@ -279,7 +279,7 @@ app.Run();
 In Part 2, we’ll dive into **global error handling and logging**. We'll cover:
 
 - Setting up custom error handling middleware
-- Implementing centralized logging for your API using **NLog**
+- Implementing logging for your API using **NLog**
 - How to effectively capture and log error details
 
 
