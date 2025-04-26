@@ -6,7 +6,7 @@ tags: [dotnet,dotnet9,cleancode,csharp,softwaredesign,exceptions,nlog]
 series: "Web API – Step-by-Step Best Practices"
 ---
 
-In the previous post, we set up a basic .NET 9 Web API project. Now it’s time to take things further by adding **global error handling** and **logging** to make our API more robust. 
+In the [previous post](https://optimalcoder.net/net-core-web-api-project-setup), we set up a basic .NET 9 Web API project. Now it’s time to take things further by adding **global error handling** and **logging** to make our API more robust. 
 
 In this post, we’ll cover:
 - How to implement **global error handling** with middleware  

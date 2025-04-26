@@ -5,7 +5,7 @@ date:   2025-01-22
 tags: [builder,csharp,softwaredevelopment,designpatterns]
 series: Design Patterns
 ---
-This is also, like a [Singleton](https://mirnes-mrkaljevic.github.io/design-patterns-singleton), one of the creational design patterns. It provides the way of creating complex objects step by step by simple chaining and every particular step is independent of other steps.
+This is also, like a [Singleton](https://optimalcoder.net/design-patterns-singleton), one of the creational design patterns. It provides the way of creating complex objects step by step by simple chaining and every particular step is independent of other steps.
 
 Let us dive into the real example of usage. For showing purpose we have created an example in C# which creates simple SQL queries using described pattern. 
 

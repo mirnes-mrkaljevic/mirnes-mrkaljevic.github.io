@@ -4,7 +4,7 @@ title:  "Dependency Injection In .NET Core With Strategy Pattern"
 date:   2025-03-24
 tags: [csharp,dependencyinjection,netcore,strategy]
 ---
-In the previous post, we gave an introduction and explained the basic concept of the [Strategy Pattern](https://mirnes-mrkaljevic.github.io/design-patterns-strategy). Now, we want to go a bit further and demonstrate how it works in practice alongside a dependency injection in .NET Core. Instead of manually instantiating strategies, we let the ASP.NET Core DI container inject the correct implementation at runtime.
+In the previous post, we gave an introduction and explained the basic concept of the [Strategy Pattern](https://optimalcoder.net/design-patterns-strategy). Now, we want to go a bit further and demonstrate how it works in practice alongside a dependency injection in .NET Core. Instead of manually instantiating strategies, we let the ASP.NET Core DI container inject the correct implementation at runtime.
 
 ## Example
 
