@@ -232,6 +232,17 @@ dotnet add package NLog.Database
 
 ```
 
+### Load NLog config in  `Program.cs`
+```csharp
+
+....
+
+LogManager.Setup().LoadConfigurationFromAppSettings();
+
+....
+```
+
+
 ### Add logger to `ExceptionHandlingMiddleware.cs`
 
 ```csharp
