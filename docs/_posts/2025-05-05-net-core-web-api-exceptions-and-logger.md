@@ -307,7 +307,6 @@ namespace Sample.Migrations.Migrations
 {: .space }
 ## Coming Up Next…
 
-In Part 3, we’ll start working on **authentication** and **authorization**.  
-We’ll set up secure login, protect endpoints, and manage user roles and permissions properly. 
+In Part 3, we’ll introduce a project structure with service and repository layers, and use dependency injection to organize your business logic. 
 
 Stay tuned!
