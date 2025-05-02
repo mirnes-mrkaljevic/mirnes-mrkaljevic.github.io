@@ -3,10 +3,10 @@ layout: post
 title: "Web API Project Setup and Migrations"
 date: 2025-04-28
 tags: [dotnet,dotnet9,cleancode,csharp,softwaredesign,fluentmigrator,migrations]
-series: "Web API – Step-by-Step Best Practices"
+series: ".NET Core Web API – Step-by-Step Best Practices"
 ---
 
-Welcome to the first post in the **“Web API – Step-by-Step Best Practices”** series. In this series, we’ll walk through building a modern, clean, and maintainable Web API using .NET 9. Each post will focus on a specific aspect—from project setup and architecture to testing, migrations, and deployment.
+Welcome to the first post in the **“.NET Core Web API – Step-by-Step Best Practices”** series. In this series, we’ll walk through building a modern, clean, and maintainable Web API using .NET 9. Each post will focus on a specific aspect—from project setup and architecture to testing, migrations, and deployment.
 
 
 ![Software Design](/assets/images/flowchart-design.jpg)
