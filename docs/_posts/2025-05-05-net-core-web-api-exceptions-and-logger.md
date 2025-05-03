@@ -281,7 +281,7 @@ using FluentMigrator;
 namespace Sample.Migrations.Migrations
 {
     [Migration(20250426001)]
-    public class CreateLogsTable: Migration
+    public class Mig20250426001_CreateLogsTable: Migration
     {
         public override void Up()
         {

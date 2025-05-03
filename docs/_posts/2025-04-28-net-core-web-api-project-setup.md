@@ -188,7 +188,7 @@ using FluentMigrator;
 namespace Sample.Migrations.Migrations;
 
 [Migration(20250421001)]
-public class InitialMigration : Migration
+public class Mig20250421001_InitialMigration : Migration
 {
     public override void Up()
     {
