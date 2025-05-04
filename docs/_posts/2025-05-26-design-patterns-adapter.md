@@ -10,6 +10,7 @@ The Adapter Pattern is a structural design pattern that allows objects with inco
 
 This approach is especially valuable when integrating legacy systems or third-party APIs that don’t follow your architecture or naming conventions.
 
+{: .space }
 ## When to Use the Adapter Pattern
 
 You should consider using the Adapter Pattern when:
@@ -20,7 +21,7 @@ You should consider using the Adapter Pattern when:
 
 - You're working with third-party libraries that can’t be modified.
 
-
+{: .space }
 ## Implementing the Prototype Pattern in C&#35;
 
 Lets imagine we are building an application that relies on a clean, simple interface for logging:
@@ -48,6 +49,7 @@ These two interfaces are incompatible. The client expects `LogInfo(string)`, but
 
 Instead of modifying either interface, you can use the Adapter Pattern to resolve this mismatch.
 
+{: .space }
 ### Create the Adapter
 
 ```csharp
@@ -69,7 +71,7 @@ public class LegacyLoggerAdapter : ILogger
 ```
 Here, `LegacyLoggerAdapter` translates the expected `LogInfo` method into the legacy class's `WriteLogToFile` method.
 
-
+{: .space }
 ### Client
 
 Now, our client code can use the `ILogger` interface without knowing anything about the legacy system:
@@ -88,7 +90,7 @@ class Program
 
 The client gets the expected behavior, and the legacy system remains untouched.
 
-
+{: .space }
 ## Benefits
 
 - Decouples client code from implementation details
@@ -99,6 +101,7 @@ The client gets the expected behavior, and the legacy system remains untouched.
 
 - Makes third-party or legacy classes reusable in new contexts
 
+{: .space }
 ## When Not to Use It
 
 - When you can directly modify the original interface or class
@@ -107,6 +110,7 @@ The client gets the expected behavior, and the legacy system remains untouched.
 
 - If it’s used to hide bad design permanently instead of improving it over time
 
+{: .space }
 ## Conclusion
 
 The Adapter Pattern is really useful when we need to make incompatible interfaces work together without modifying existing code. This pattern provides clean and maintanable solution in the cases when we need to deal with legacy systems, some external libraries or when we just trying to reuse old components in new ways.
