@@ -193,7 +193,7 @@ namespace Sample.Api.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class UserController : Controller
+    public class UserController : ControllerBase
     {
 
         private readonly IUserService _service;
