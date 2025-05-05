@@ -9,11 +9,11 @@ layout: default
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
+  {%- if paginator.posts.size > 0 -%}
   <input type="text" id="search-input" placeholder="Search posts..." />
         <ul id="results-container"></ul>
     <ul class="post-list">
-      {%- for post in site.posts -%}
+      {%- for post in paginator.posts -%}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
@@ -30,6 +30,15 @@ layout: default
       </li>
       {%- endfor -%}
     </ul>
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}">← Previous</a>
+      {% endif %}
+    
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}">Next →</a>
+      {% endif %}
+    </div>
 
   {%- endif -%}
 
