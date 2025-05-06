@@ -41,7 +41,7 @@ plugins:
   - jekyll-paginate
 
 paginate: 10       # Number of posts per page
-paginate_path: "/page:num" 
+paginate_path: "/page/:num" 
 
 # Exclude from processing.
 # The following items will not be processed, by default.
