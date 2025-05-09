@@ -39,22 +39,23 @@ Whether you’re applying for a job or seeking internal promotion, your body lan
 
 Above, we mentioned few points why body language is important. Bellow are some good books to read on this topic:
  1. **"What Every BODY is Saying" by Joe Navarro**
-   A former FBI agent shares how to decode others’ body language—and how to project confidence.
+   A former FBI agent shares how to decode others’ body language—and how to project confidence. [https://amzn.eu/d/fSxYUwK](https://amzn.eu/d/fSxYUwK)
 
 2. **"The Definitive Book of Body Language" by Barbara Pease & Allan Pease**
-   A comprehensive guide to understanding non-verbal cues in various settings.
+   A comprehensive guide to understanding non-verbal cues in various settings. [https://amzn.eu/d/7ENzQQU](https://amzn.eu/d/7ENzQQU)
+
 
 3. **"Body Language: How to Read Others' Thoughts by Their Gestures" by Allan Pease**
-   A classic that breaks down practical body language for daily interactions.
+   A classic that breaks down practical body language for daily interactions. [https://amzn.eu/d/2VLgUJT](https://amzn.eu/d/2VLgUJT)
 
 4. **"Presence" by Amy Cuddy**
-   Focuses on how body posture affects confidence and presence, including for presentations and meetings.
+   Focuses on how body posture affects confidence and presence, including for presentations and meetings. [https://amzn.eu/d/3LlQj4c](https://amzn.eu/d/3LlQj4c)
 
 5. **"Louder Than Words" by Joe Navarro**
-   Offers deeper insight into how professionals can use non-verbal intelligence to communicate more effectively.
+   Offers deeper insight into how professionals can use non-verbal intelligence to communicate more effectively. [https://amzn.eu/d/gpdSaro](https://amzn.eu/d/gpdSaro)
 
 6. **"The Like Switch" by Jack Schafer**
-   A former FBI agent explains how to use body language and psychology to build rapport quickly.
+   A former FBI agent explains how to use body language and psychology to build rapport quickly. [https://amzn.eu/d/hbnyqEh](https://amzn.eu/d/hbnyqEh)
 
 Have you already read some of them? Share your thoughts in the comments!
 
