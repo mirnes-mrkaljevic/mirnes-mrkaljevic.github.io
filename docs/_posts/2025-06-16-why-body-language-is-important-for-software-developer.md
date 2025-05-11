@@ -11,7 +11,7 @@ We will try here in a few points to summarize why body language is important for
 {: .space }
 ## 1. Improves Team Communication
 
-Developers regularly work in teams—whether in daily stand-ups, code reviews, or brainstorming sessions. Positive body language like an eye contact, open posture, and nodding shows attentiveness and fosters trust, helping ideas flow more easily.
+Developers regularly work in teams; they participate in daily stand-ups, code reviews, brainstorming sessions, internal workshops... Positive body language like an eye contact, open posture, and nodding shows attentiveness and fosters trust, helping ideas flow more easily.
 
 {: .space }
 ## 2. Boosts Leadership Presence
@@ -26,7 +26,7 @@ Whether you're demoing a project or explaining a complex architecture to non-tec
 {: .space }
 ## 4. Reduces Miscommunication
 
-In diverse teams, especially remote or cross-cultural ones, body language can be beneficial where words may fail. Being aware of your own non-verbal signals—and interpreting others’, can prevent potential misunderstandings.
+In diverse teams, especially in cross-cultural ones, body language can be beneficial where words may fail. Being aware of your own non-verbal signals—and interpreting others’, can prevent potential misunderstandings.
 
 
 {: .space }
