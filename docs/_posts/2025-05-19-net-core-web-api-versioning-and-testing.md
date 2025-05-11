@@ -150,3 +150,5 @@ This wraps up our step-by-step guide to building a clean, testable, and producti
 
 Thanks for following the series! 
 
+Happy coding!
+
