@@ -29,7 +29,7 @@ linkedin_username: mirnes-mrkaljevic
 github_username:  mirnes-mrkaljevic
 show_excerpts: true
 
-permalink: /:title
+permalink: /:title/
 
 # Build settings
 theme: minima 
