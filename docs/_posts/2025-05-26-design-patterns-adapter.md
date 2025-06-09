@@ -6,7 +6,7 @@ tags: [cleancode,csharp,designpatterns,adapter]
 series: Design Patterns
 ---
 
-The Adapter Pattern is a structural design pattern that allows objects with incompatible interfaces to work together. Rather than modifying existing code to fit a new system, the Adapter Pattern lets us wrap it with a new interface—acting as a bridge between mismatched parts of your application.
+The Adapter Pattern is a structural design pattern that allows objects with incompatible interfaces to work together. Rather than modifying existing code to fit a new system, the Adapter Pattern lets us wrap it with a new interface, acting as a bridge between mismatched parts of your application.
 
 This approach is especially valuable when integrating legacy systems or third-party APIs that don’t follow your architecture or naming conventions.
 
@@ -97,7 +97,7 @@ The client gets the expected behavior, and the legacy system remains untouched.
 
 - Avoids rewriting or breaking legacy systems
 
-- Supports Open/Closed Principle – open to extension, closed to modification
+- Supports Open/Closed Principle, open to extension, closed to modification
 
 - Makes third-party or legacy classes reusable in new contexts
 

@@ -91,6 +91,6 @@ Finally, the HTTP response is sent back to the client. At this point, the reques
 {: .space }
 ## Conclusion
 
-The .NET Core Web API request lifecycle is powerful and highly extensible. By understanding each step—especially the flow of middleware before and after controller logic—you can design better APIs, implement robust logging and error handling, and create a maintainable architecture that scales well.
+The .NET Core Web API request lifecycle is powerful and highly extensible. By understanding each step, you can design better APIs, implement robust logging and error handling, and create a maintainable architecture that scales well.
 
 Happy coding!

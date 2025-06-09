@@ -26,7 +26,7 @@ Whether you're demoing a project or explaining a complex architecture to non-tec
 {: .space }
 ## 4. Reduces Miscommunication
 
-In diverse teams, especially in cross-cultural ones, body language can be beneficial where words may fail. Being aware of your own non-verbal signals—and interpreting others’, can prevent potential misunderstandings.
+In diverse teams, especially in cross-cultural ones, body language can be beneficial where words may fail. Being aware of your own non-verbal signals and interpreting others’, can prevent potential misunderstandings.
 
 
 {: .space }
@@ -39,7 +39,7 @@ Whether you’re applying for a job or seeking internal promotion, your body lan
 
 Above, we mentioned few points why body language is important. Bellow are some good books to read on this topic:
  1. **"What Every BODY is Saying" by Joe Navarro**
-   A former FBI agent shares how to decode others’ body language—and how to project confidence. [https://amzn.eu/d/fSxYUwK](https://amzn.eu/d/fSxYUwK)
+   A former FBI agent shares how to decode others’ body language and how to project confidence. [https://amzn.eu/d/fSxYUwK](https://amzn.eu/d/fSxYUwK)
 
 2. **"The Definitive Book of Body Language" by Barbara Pease & Allan Pease**
    A comprehensive guide to understanding non-verbal cues in various settings. [https://amzn.eu/d/7ENzQQU](https://amzn.eu/d/7ENzQQU)

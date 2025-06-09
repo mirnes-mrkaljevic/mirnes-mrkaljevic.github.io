@@ -5,7 +5,7 @@ date: 2025-06-02
 tags: [cleancode,designpatterns,softwaredesign,optimization]
 ---
 
-In software development, performance matters, but chasing it too early can lead you into dangerous territory. This is the pitfall of premature optimization—a term that has become a cautionary mantra among developers. Coined famously by Donald Knuth, the phrase “premature optimization is the root of all evil” is not just a quip—it's a hard-earned lesson from decades of building complex systems.
+In software development, performance matters, but chasing it too early can lead you into dangerous territory. This is the pitfall of premature optimization, a term that has become a cautionary mantra among developers. As said by Donald Knuth, the phrase “premature optimization is the root of all evil” is not just a quip, it's a hard-earned lesson from decades of building complex systems.
 
 {: .space }
 ## What Is Premature Optimization?
@@ -23,22 +23,22 @@ When you optimize too early, you risk spending hours or even days improving some
 {: .space }
 ### 2. Complexity Without Justification
 
-Optimized code is often more complex and harder to read or maintain. If the performance gain isn't needed, all you're left with is unnecessary complexity—a debt you or your teammates will have to pay later.
+Optimized code is often more complex and harder to read or maintain. If the performance gain isn't needed, all you're left with is unnecessary complexity, in other words, a debt you or your teammates will have to pay later.
 
 {: .space }
 ### 3. Inhibits Flexibility
 
-Over-optimized code is often not flexible. It’s tuned for a specific case and harder to refactor or extend. As project requirements evolve—which they always do—this premature rigidity can slow progress and reduce adaptability.
+Over-optimized code is often not flexible. It’s tuned for a specific case and harder to refactor or extend. As project requirements evolve, which they always do, this premature rigidity can slow progress and reduce adaptability.
 
 {: .space }
 ### 4. Violates YAGNI (You Aren’t Gonna Need It)
 
-Premature optimization often assumes future needs—handling millions of users, processing terabytes of data, etc.—without current evidence. You end up designing for scale you may never reach, violating a key agile principle: build what you need when you need it.
+Premature optimization often assumes future needs, like handling millions of users, processing terabytes of data, etc. without current evidence. You end up designing for scale you may never reach, violating a key agile principle: build what you need when you need it.
 
 {: .space }
 ## When Optimization Does Matter
 
-Of course, optimization has its place—after you've measured performance, identified real bottlenecks, and validated that improvements are necessary. This approach, known as profiling-first optimization, ensures that your efforts are focused where they will have real impact.
+Of course, optimization has its place, but after you've measured performance, identified real bottlenecks, and validated that improvements are necessary. This approach, known as profiling-first optimization, ensures that your efforts are focused where they will have real impact.
 
 A few places where early attention to performance can be warranted include:
 
@@ -68,7 +68,7 @@ In these contexts, a deep understanding of performance may be built into the des
 {: .space }
 ## Conclusion
 
-Premature optimization is seductive. It feels like you're being smart and proactive. But in reality, it often leads to wasted time, reduced code quality, and misallocated resources. In modern development, especially with powerful hardware and compilers, correctness, clarity, and maintainability should come first. Optimize when—and only when—the data tells you it’s necessary.
+Premature optimization is seductive. It feels like you're being smart and proactive. But in reality, it often leads to wasted time, reduced code quality, and misallocated resources. In modern development, especially with powerful hardware and compilers, correctness, clarity, and maintainability should come first. Optimize when, and only when, the data tells you it’s necessary.
 
 Write code that works. Make it clear. Then, if needed, make it fast.
 
