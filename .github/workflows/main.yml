@@ -1,28 +1,28 @@
-name: Monday Build for GitHub Pages
+#name: Monday Build for GitHub Pages
 
-on:
-  schedule:
-    - cron: "0 0 * * MON"  # This runs at midnight UTC every Monday
-  workflow_dispatch:  # This allows you to trigger the build manually if needed
+#on:
+  #schedule:
+   # - cron: "0 0 * * MON"  # This runs at midnight UTC every Monday
+ # workflow_dispatch:  # This allows you to trigger the build manually if needed
 
-jobs:
-  auto-check-and-deploy:
-    runs-on: ubuntu-latest  # Choose the OS for the action to run on
+#jobs:
+#  auto-check-and-deploy:
+ #   runs-on: ubuntu-latest  # Choose the OS for the action to run on
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2  # Checks out your repository code
+ #   steps:
+ #     - name: Checkout repository
+ #       uses: actions/checkout@v2  # Checks out your repository code
 
-      - name: Insert timestamp to trigger github pages deploy
-        run: |
-          echo "Triggered rebuild at $(date -u)" > docs/.trigger.txt
+#      - name: Insert timestamp to trigger github pages deploy
+#        run: |
+#          echo "Triggered rebuild at $(date -u)" > docs/.trigger.txt
 
-      - name: Commit and push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/.trigger.txt
-          git commit -m "Daily rebuild trigger"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Commit and push
+#        run: |
+#          git config user.name "github-actions[bot]"
+#          git config user.email "github-actions[bot]@users.noreply.github.com"
+#          git add docs/.trigger.txt
+#          git commit -m "Daily rebuild trigger"
+#          git push
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
